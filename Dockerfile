@@ -15,4 +15,4 @@ RUN npm install -g gitlab-cli
 RUN mkdir -p /root/.config/gitlab-cli
 COPY ./files/default.js /root/.config/gitlab-cli/
 
-CMD gitlab
+ENTRYPOINT ["gitlab", "--config=/root/.config/gitlab-cli/default.js"]
